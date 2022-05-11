@@ -109,6 +109,13 @@ header {
     padding-left: 20px;
     padding-top: 10px;
     color: var(--cltText);
+}
+
+.menu__logo {
+    font-size: 2rem;
+}
+
+.playlists__new {
     font-size: 1.5rem;
 }
 
@@ -138,11 +145,29 @@ opacity: 0.7;
 .user {
     position: absolute;
     bottom: 120px;
-    left: 15px;
+    left: 20px;
+    width: 250px;
+}
+
+.user__download {
+    padding-bottom: 10px;
+}
+
+.user__profile{
+    padding-top: 10px;
+}
+
+.profile__user {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-gap: 10px;
+    align-items: center;
 }
 
 .user__profile img {
     width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 /* LEFT MENU */
 
@@ -154,13 +179,54 @@ footer {
     width: 100%;
     height: 100px;
     background: var(--clrFooter);
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 300px 1fr 200px;
     place-items: center;
     padding: 10px;
     bottom: 0;
     right: 0;
     left: 0;
 }
+
+.player__current {
+    display: grid;
+    grid-template-columns: 60px 180px 30px 30px;
+}
+
+.current__artwork img {
+    width: 50px;
+}
+
+.player__controls {
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+}
+
+.controls__buttons i {
+    width:50px;
+    font-size: 1.5rem;
+}
+
+.controls__time {
+    display: flex;
+    place-items: center;
+}
+
+.controls__buttons {
+    display: flex;
+    place-content: center;
+}
+
+.controls__time hr {
+    width: 400px;
+    height: 5px;
+    border-radius: 2px;
+    color: var(--cltText);
+    margin: 0px 10px 0px 10px;
+    opacity: 0.7;
+}
+
+
+
 /* FOOTER PLAYER */
 
 /* 
