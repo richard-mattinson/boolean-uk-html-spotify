@@ -41,12 +41,9 @@ select {
 
 
 body {
-    /* background-image: linear-gradient(to top right,rgb(28, 1, 32), rgb(37, 31, 38)); */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     min-height: 100vh;
     position: relative;
+    overflow-y: hidden;
 }
 /* GLOBAL ENDS */
 
@@ -75,7 +72,7 @@ header {
     display: grid;
     grid-template-columns: 200px 1fr;
     background-image: linear-gradient(to top right,rgb(28, 1, 32), rgb(37, 31, 38));
-    min-height: 100vh;
+    /* min-height: 100vh; */
     width: 100%;
 }
 
@@ -87,7 +84,7 @@ header {
     width: 300px;
     z-index: 1;
     display: grid;
-    grid-template-rows: repeat(5, 50px) 1fr 100px;
+    grid-template-rows: 70px repeat(4, 50px) 1fr 100px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -169,7 +166,60 @@ opacity: 0.7;
     height: 50px;
     border-radius: 50%;
 }
-/* LEFT MENU */
+/* LEFT MENU END */
+
+/* MAIN */
+
+.main {
+    display: grid;
+    padding:100px 0px 100px 120px;
+    grid-template-rows: 50px auto;
+}
+
+.main__category {
+    text-transform: uppercase;
+    display: flex;
+    place-content: center;
+}
+
+.main__category ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+      float: left;
+      padding: 10px;
+  }
+
+  li:hover {
+    border-bottom: 5px solid rgb(145, 122, 200);
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.main__music {
+    overflow-y: scroll;
+    justify-self: center;
+    width: 100%;
+}
+
+.music__recent,
+.music__suggestions {
+    font-size: 1.5rem;
+}
+
+.recent__carousel,
+.suggestions__carousel {
+    overflow-x: scroll;
+    height: 300px;
+    margin: 10px 0px 10px 0px;
+}
+
+/* MAIN END */
 
 /* FOOTER PLAYER */
 footer {
@@ -179,7 +229,7 @@ footer {
     width: 100%;
     height: 100px;
     background: var(--clrFooter);
-    grid-template-columns: 300px 1fr 200px;
+    grid-template-columns: 300px 1fr 300px;
     place-items: center;
     padding: 10px;
     bottom: 0;
@@ -225,6 +275,21 @@ footer {
     opacity: 0.7;
 }
 
+.player__volume {
+    display: grid;
+    grid-template-columns: 100px 150px;
+    place-items: center;
+}
+
+.player__volume hr {
+    width: 140px;
+    border-radius: 2px;
+    border: 2px solid var(--cltText);
+}
+
+.player__volume i {
+    width: 30px;
+}
 
 
 /* FOOTER PLAYER */
