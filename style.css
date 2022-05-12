@@ -65,6 +65,12 @@ header {
     padding: 10px 20px;
     margin: 15px;
 }
+
+.upgrade__link:hover {
+    background: rgb(215, 195, 219);
+    color: var(--clrTopbar);
+    font-weight: 900;
+}
 /* HEADER END */
 
 
@@ -98,7 +104,6 @@ header {
     display: flex;
     align-items: center;
     padding-left: 20px;
-    color: var(--cltText);
 }
 
 .menu__logo,
@@ -107,7 +112,6 @@ header {
     align-items: center;
     padding-left: 20px;
     padding-top: 10px;
-    color: var(--cltText);
 }
 
 .menu__logo {
@@ -133,12 +137,16 @@ header {
 .menu__library:hover,
 .playlists__new:hover,
 .playlists__created:hover {
-    opacity: 0.7;
+    border-left: 5px solid var(--cltTextHover);
+    display: table;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .menu__text {
     padding-left: 10px;
     display: inline;
+    cursor: pointer;
 }
 
 .user {
@@ -201,6 +209,7 @@ header {
     display: table;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
   }
 
 .main__music {
@@ -249,6 +258,7 @@ h3 {
 .tile__artwork {
     position: relative;
     float: left;
+    cursor: pointer;
 }
 
 .tile__artwork .fa-circle-play {
@@ -261,11 +271,14 @@ h3 {
 
 .tile__artwork:hover .fa-circle-play {
     visibility: visible;
-    cursor: pointer;
 }
 
-.tile__artwork:hover {
-        filter: brightness(50%);
+.fa-circle-play:hover .tile__artwork img {
+    filter: brightness(75%);
+}
+
+.tile__artwork img:hover {
+        filter: brightness(75%);
 }
 
 .recent__carousel,
@@ -281,7 +294,7 @@ h3 {
 }
 
 .music__similar {
-    margin-bottom: 200px;
+    margin-bottom: 280px;
 }
 
 .carousel__tile {
@@ -293,6 +306,16 @@ h3 {
 .tile__artwork img {
     width: 170px;
     height:170px;
+}
+
+.tile__portrait img{
+    width: 170px;
+    height:170px;
+    border-radius: 50%;
+}
+
+.similar__carousel {
+    text-align: center;
 }
 /* MAIN END */
 
@@ -341,6 +364,10 @@ footer {
     place-content: center;
 }
 
+.controls__buttons:hover {
+    cursor: pointer;
+}
+
 .controls__time hr {
     width: 400px;
     height: 5px;
@@ -364,6 +391,10 @@ footer {
 
 .player__volume i {
     width: 30px;
+}
+
+.volume__icons:hover {
+    cursor: pointer;
 }
 /* FOOTER PLAYER */
 
