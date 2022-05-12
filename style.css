@@ -150,7 +150,7 @@ header {
 
 .user__download {
     padding-bottom: 10px;
-}
+} 
 
 .user__profile{
     padding-top: 10px;
@@ -246,6 +246,28 @@ h3 {
     padding-left: 5px;
 }
 
+.tile__artwork {
+    position: relative;
+    float: left;
+}
+
+.tile__artwork .fa-circle-play {
+    visibility: hidden;
+    position: absolute;
+    left: 45px;
+    top:45px;
+    font-size: 5rem;
+}
+
+.tile__artwork:hover .fa-circle-play {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.tile__artwork:hover {
+        filter: brightness(50%);
+}
+
 .recent__carousel,
 .suggestions__carousel,
 .similar__carousel {
@@ -272,7 +294,6 @@ h3 {
     width: 170px;
     height:170px;
 }
-
 /* MAIN END */
 
 /* FOOTER PLAYER */
@@ -344,88 +365,127 @@ footer {
 .player__volume i {
     width: 30px;
 }
-
-
 /* FOOTER PLAYER */
 
-/* 
-.user-input {
-    margin: 5%;
-    width: 40%;
-    height: min-content;
-    padding: 3%;
-    color: black;
-    background: white;
-    border-radius: 10px;
+/* MEDIA QUERIES */
+@media screen and (max-width: 1100px) {
+
+    footer {
+        grid-template-columns: 300px 1fr 200px;
+    }
+
+    .controls__time hr {
+        width: 200px;
+    }
+
+    .player__volume {
+        display: grid;
+        grid-template-columns: 100px 80px;
+        place-items: center;
+    }
+
+    .player__volume hr {
+        width: 70px;
+        border-radius: 2px;
+        border: 2px solid var(--cltText);
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+.menu__text,
+.menu__playlists,
+.user__break {
+display: none;
+}
+
+.container {
+    grid-template-columns: 1px auto;
+}
+
+.menu {
+    width: 70px;
+}
+
+.user__profile img {
+    width: 25px;
+    height: 25px;
+    border-radius: 80%;
+}
+
+.main {
     display: grid;
-    grid-template-rows: auto;
-    place-items: center;
+    padding:100px 0px 100px 90px;
+    grid-template-rows: 50px auto;
 }
 
-form {
-    width: 80%;
 }
 
-button,
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 20px;
-    border: none;
-    border-bottom: rgb(219, 208, 208) solid 2px;
-    cursor: pointer;
-}
+@media screen and (max-width: 750px) {
 
-button {
-    margin-top: 20px;
-}
+    .main__category ul {
+        font-size: 0.6rem;
+        }
+        
+    .menu__text,
+    .menu__playlists,
+    .user__break,
+    .fa-list-ul,
+    .fa-display {
+    display: none;
+    }
+    
+    .container {
+        grid-template-columns: 1px auto;
+    }
+    
+    .menu {
+        width: 70px;
+    }
+    
+    .user__profile img {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+    
+    
+    footer {
+        grid-template-columns: 150px 1fr 150px;
+    }
+    
+    .player__current {
+        display: grid;
+        grid-template-columns: 25px 80px 20px 20px;
+        font-size: 0.6rem;
+    }
+    
+    .current__artwork img {
+        width: 20px;
+    }
+    
+    
+    .controls__buttons i {
+        width:30px;
+        font-size: 1.2rem;
+    }
+    
+    .controls__time hr {
+        width: 80px;
+    }
+    
+    .player__volume {
+        display: grid;
+        grid-template-columns: 30px 70px;
+        place-items: center;
+        font-size: 0.6rem;
+    }
+    
+    .player__volume hr {
+        width: 70px;
+        border-radius: 2px;
+        border: 2px solid var(--cltText);
+    }
+    }
 
-h1 {
-    text-align: center;
-}
-
-.continue {
-    background-image: linear-gradient(to left,rgb(89, 189, 223), rgb(202, 62, 242));
-    color: white;
-    font-size: 1.2rem;
-    border-radius: 30px;
-}
-
-@keyframes valid {
-    from {background-color: rgb(234, 209, 213);}    
-    to {background-color: rgb(221, 237, 221);}
-  }
-
-.continue:hover {
-    color: black;
-    background-image: linear-gradient(to left,rgb(176, 223, 238), rgb(230, 182, 243));
-    text-decoration: underline;
-}
-
-::placeholder {
-    color: rgb(181, 177, 177);
-    font-size: 1.3rem;
-}
-
-select {
-    font-size: 1.3rem;
-}
-
-input:focus:valid {
-    /* background-color: rgb(221, 237, 221); */
-    /* animation-name: valid;
-    animation-duration: 1s;
-}
-
-input:focus:invalid {
-    background-color: rgb(234, 209, 213);
-  }
-
-  nav{
-      padding: 20px;
-  }
-
-
-
- */ */
+/* MEDIA QUERIES END */
