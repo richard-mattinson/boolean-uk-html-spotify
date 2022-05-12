@@ -43,7 +43,7 @@ select {
 body {
     min-height: 100vh;
     position: relative;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 /* GLOBAL ENDS */
 
@@ -79,6 +79,7 @@ header {
 /* LEFT MENU */
 .menu {
     position: relative;
+    float: left;
     background: var(--clrMenu);
     height: 100vh;
     width: 300px;
@@ -207,16 +208,34 @@ opacity: 0.7;
     width: 100%;
 }
 
-.music__recent,
-.music__suggestions {
+h2 {
     font-size: 1.5rem;
 }
 
+h3 {
+    padding: 5px;
+}
+
+.carousel__tile p {
+    padding-left: 5px;
+}
+
 .recent__carousel,
-.suggestions__carousel {
+.suggestions__carousel,
+.similar__carousel {
     overflow-x: scroll;
+    overflow-y: hidden;
     height: 300px;
     margin: 10px 0px 10px 0px;
+    display: grid;
+    grid-template-columns: repeat(10, 180px);
+}
+
+.carousel__tile {
+}
+
+.tile__artwork {
+    width:150px;
 }
 
 /* MAIN END */
