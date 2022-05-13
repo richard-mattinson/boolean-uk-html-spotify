@@ -128,7 +128,6 @@ header {
     padding-left: 50px;
     padding-top: 10px;
     color: var(--cltText);
-
 }
 
 .menu__logo:hover,
@@ -312,6 +311,7 @@ h3 {
     width: 170px;
     height:170px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .similar__carousel {
@@ -454,15 +454,15 @@ display: none;
 
 @media screen and (max-width: 750px) {
 
-    .main__category ul {
-        font-size: 0.6rem;
-        }
+    .main {
+        grid-template-rows: auto;
+    }
         
     .menu__text,
     .menu__playlists,
     .user__break,
-    .fa-list-ul,
-    .fa-display {
+    #list,
+    #display {
     display: none;
     }
     
@@ -487,12 +487,12 @@ display: none;
     
     .player__current {
         display: grid;
-        grid-template-columns: 25px 80px 20px 20px;
+        grid-template-columns: 0px 80px 20px 20px;
         font-size: 0.6rem;
     }
     
     .current__artwork img {
-        width: 20px;
+        display: none;
     }
     
     
